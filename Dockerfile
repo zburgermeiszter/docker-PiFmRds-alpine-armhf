@@ -1,3 +1,6 @@
+# docker run -d --privileged -v $PWD:/git pi_fm_rds -freq 88.5 -audio /git/src/stereo_44100.wav
+# TODO: Try to reduce the image size
+
 FROM resin/rpi-raspbian:wheezy
 
 MAINTAINER Zoltan Burgermeiszter <zoltan@burgermeiszter.com>
@@ -17,5 +20,5 @@ RUN apt-get update && \
     apt-get clean &&\
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-ENTRYPOINT ["pi_fm_rds"]
+ENTRYPOINT ["/root/pi_fm_rds"]
 
