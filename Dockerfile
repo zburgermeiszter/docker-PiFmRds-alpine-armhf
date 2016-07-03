@@ -1,5 +1,7 @@
 FROM resin/rpi-raspbian:wheezy
 
+MAINTAINER Zoltan Burgermeiszter <zoltan@burgermeiszter.com>
+
 WORKDIR /root
 
 ADD src /root/src
